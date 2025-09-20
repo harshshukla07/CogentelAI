@@ -27,7 +27,7 @@ import { useRouter } from "next/navigation";
 import { FaGithub, FaGoogle } from "react-icons/fa";
 
 const formSchema = z.object({
-  email: z.email(),
+  email: z.string().email("Invalid email address"),
   password: z.string().min(1, { message: "Password is required" }),
 });
 
@@ -113,7 +113,7 @@ const SignInView = () => {
                         <FormControl>
                           <Input
                             type="email"
-                            placeholder="m@example.com"
+                            placeholder="user@example.com"
                             {...field}
                           />
                         </FormControl>

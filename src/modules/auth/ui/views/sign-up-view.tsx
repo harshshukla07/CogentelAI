@@ -141,7 +141,7 @@ const SignUpView = () => {
                         <FormControl>
                           <Input
                             type="email"
-                            placeholder="m@example.com"
+                            placeholder="user@example.com"
                             {...field}
                           />
                         </FormControl>
